@@ -4,6 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { AuroraBackground } from "@/components/aurora-background";
+import { Header } from "@/components/Header";
+
 
 export default function HomePage() {
   const cards = [
@@ -34,8 +36,10 @@ export default function HomePage() {
   ];
 
   return (
+    <>
+    <Header />
     <AuroraBackground>
-      <main className="min-h-screen text-zinc-800 flex items-center justify-center p-6">
+      <main className="pt-20 min-h-screen text-zinc-800 flex items-center justify-center p-6">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
@@ -115,5 +119,6 @@ export default function HomePage() {
         </motion.div>
       </main>
     </AuroraBackground>
+    </>
   );
 }

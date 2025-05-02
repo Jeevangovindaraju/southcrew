@@ -1,9 +1,19 @@
+'use client';
+
+import HeroSection from './components/HeroSection';
+import ProductGrid from './components/ProductGrid';
+import StorySection from './components/StorySection';
+import Testimonials from './components/Testimonials';
+import NewsletterSignup from './components/NewsletterSignup';
+
 export default function ThreadsPage() {
-    return (
-      <div className="p-10">
-        <h1 className="text-3xl font-bold">South Crew Threads</h1>
-        <p className="mt-4">All about oversized T-shirts and hoodies.</p>
-      </div>
-    );
-  }
-  
+  return (
+    <div className="space-y-32">
+      <HeroSection />
+      <ProductGrid />
+      <StorySection />
+      <Testimonials />
+      <NewsletterSignup />
+    </div>
+  );
+}
