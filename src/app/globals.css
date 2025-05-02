@@ -24,3 +24,50 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Background aceternity ui*/
+
+@keyframes waveMove {
+  0% {
+    transform: translateX(-30%) translateY(0%) scale(1);
+  }
+  50% {
+    transform: translateX(0%) translateY(4%) scale(1.1);
+  }
+  100% {
+    transform: translateX(30%) translateY(0%) scale(1);
+  }
+}
+
+.wave-animation,
+.wave-animation2,
+.wave-animation3 {
+  position: absolute;
+  width: 150%;
+  height: 150%;
+  filter: blur(100px);
+  mix-blend-mode: soft-light;
+  opacity: 0.4;
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: waveMove 16s ease-in-out infinite alternate;
+  z-index: 0;
+}
+
+.wave-animation {
+  background: radial-gradient(circle at 30% 50%, #f97316, transparent 60%),
+    radial-gradient(circle at 70% 60%, #ec4899, transparent 60%);
+  animation-duration: 14s;
+}
+
+.wave-animation2 {
+  background: radial-gradient(circle at 40% 70%, #8b5cf6, transparent 60%),
+    radial-gradient(circle at 60% 40%, #10b981, transparent 60%);
+  animation-duration: 20s;
+}
+
+.wave-animation3 {
+  background: radial-gradient(circle at 20% 30%, #fb923c, transparent 60%),
+    radial-gradient(circle at 80% 70%, #f43f5e, transparent 60%);
+  animation-duration: 25s;
+}
